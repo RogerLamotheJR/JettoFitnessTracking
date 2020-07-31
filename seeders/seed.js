@@ -6,7 +6,7 @@ mongoose.connect("mongodb://localhost/workout", {
   useFindAndModify: false
 });
 
-let workoutSeed = [
+let workOutSeed = [
   {
     day: new Date().setDate(new Date().getDate()-10),
     exercises: [
