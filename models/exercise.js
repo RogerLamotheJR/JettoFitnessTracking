@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const workOutSchema = new Schema({
+const fitnessSchema = new Schema({
   name: {
     type: String,
     trim: true,
