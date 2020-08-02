@@ -10,14 +10,17 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://<lamother>:<Roggie#01>@ds237955.mlab.com:37955/heroku_355387rz", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
 
 // routes
-app.use(require("./public/api.js"));
+app.use(require("./routes/router.js"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+
+//mongodb://<lamother>:<Roggie#01>@ds237955.mlab.com:37955/heroku_355387rz
